@@ -1,6 +1,44 @@
 A stand-alone webapp to automate importing data from various sources into CKAN
 and its DataStore.
 
+## Implementation
+
+Focus on import of Data Package stored in Github
+
+### Import of a Generic Data Package
+
+* Given URL to datapackage.json
+  * optionally a specific file(s) that have changed
+  * + CKAN API Key (bearer token)
+* Identify target CKAN dataset
+  * Use DataPackage.name attribute for Dataset name
+  * Identify target resources (by name)
+* Start import process for each data file
+
+### Import of a Single Tabular Data Package resource
+
+Require
+
+* CSV file URL
+* schema (optional?)
+* Target resource id (or dataset name + resource name?)
+* CKAN API Key
+
+### Github hook
+
+* Receive webhook payload
+* Determine if any action needed
+* Boot up Data package import process
+
+Extras / questions
+
+* Handle data file renames
+* How do we deal with a schema change (e.g. a change in type)
+  * Ans: if we drop data resource content and recreate we should be ok ...
+* Do we try to be smart with updates and only push changed rows (probably not)
+
+
+
 ## User Stories
 
 Persona:

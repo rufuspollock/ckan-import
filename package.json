@@ -1,0 +1,8 @@
+{
+  "name": "ckan-import",
+  "dependencies": {
+    "request": "",
+    "csv-parse": "",
+    "ckan": "0.2.0"
+  }
+}
