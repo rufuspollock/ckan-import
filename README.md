@@ -9,7 +9,7 @@ Focus on import of Data Package stored in Github
 
 * Given URL to datapackage.json
   * optionally a specific file(s) that have changed
-  * + CKAN API Key (bearer token)
+  * plus the CKAN API Key (our bearer token)
 * Identify target CKAN dataset
   * Use DataPackage.name attribute for Dataset name
   * Identify target resources (by name)
@@ -23,6 +23,13 @@ Require
 * schema (optional?)
 * Target resource id (or dataset name + resource name?)
 * CKAN API Key
+
+Steps:
+
+* Load CSV file (into memory or do we stream?)
+* (?) Check Schema is valid
+* Convert Schema to DataStore schema
+* Send data to DataStore
 
 ### Github hook
 

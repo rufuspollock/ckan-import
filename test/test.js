@@ -28,12 +28,27 @@ describe('', function() {
     var inStream = 'A,B\n1,2';
     var resource = {
       name: 'xyz',
-      id: '123-xyz'
+      id: '123-xyz',
+      schema: {
+        fields: [
+          {
+            name: 'A',
+            type: 'integer'
+          },
+          {
+            name: 'B',
+            type: 'integer'
+          }
+        ]
+      }
     };
     importer.importResource(inStream, resource, function(err, out) {
       assert(stubbed.calledOnce);
       calledWith = stubbed.getCall(0).args[0];
       assert.equal(calledWith.data.resource_id, resource.id);
+      assert.deepEqual(calledWith.data.fields, [
+        { id: 'A', type: 'int'}, { id: 'B', type: 'int' }
+      ]);
       assert.deepEqual(calledWith.data.records, [
         { A:1, B:2 }
       ]);
