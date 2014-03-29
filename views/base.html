@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>
+    {% block title%}{{title}}{% endblock %}
+    - CKAN Importer
+  </title>
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
+  <![endif]-->
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="http://dataprotocols.org/css/style.css" />
+  <link rel="stylesheet" href="/style.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body class="{% block bodyclass %}{{bodyclass}}{% endblock %}">
+<div class="navbar navbar-static-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <div class="brand">
+        <a href="/"><span style="color: black;">CKAN</span> Importer</a>
+      </div>
+      <ul class="nav">
+      </ul>
+      <ul class="nav pull-right">
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="content">
+    {% block content %}{{content}}{% endblock %}
+  </div> <!-- /content -->
+</div> <!-- / container -->
+
+<footer>
+  <div class="container">
+    <a href="https://github.com/rgrp/ckan-import">Source Code</a>
+  </div>
+</footer>
+</body>
+</html>
+

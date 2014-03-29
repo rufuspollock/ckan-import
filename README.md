@@ -1,6 +1,16 @@
 A stand-alone webapp to automate importing data from various sources into CKAN
 and its DataStore.
 
+## Install and Deployment
+
+Get it from github:
+
+    git clone ...
+
+We use foreman (as provided by Heroku)
+
+    foreman start -f Procfile-dev
+
 ## Implementation
 
 Focus on import of Data Package stored in Github

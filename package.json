@@ -1,8 +1,17 @@
 {
   "name": "ckan-import",
   "dependencies": {
-    "request": "",
-    "csv-parse": "",
-    "ckan": "0.2.0"
+      "request": ""
+    , "csv-parse": ""
+    , "ckan": "0.2.0"
+    , "express": ""
+    , "nunjucks": ""
+  },
+  "devDependencies": {
+      "mocha": ""
+    , "supertest": ""
+  },
+  "scripts": {
+    "test": "mocha test"
   }
 }
